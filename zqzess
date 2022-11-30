@@ -229,9 +229,9 @@ http:\/\/analytics\.163\.com\/ntes url reject
 #hostname=ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, *.xiangxiangapps.com,ios.fuliapps.com,apple.fuliapps.com
 ^https?:\/\/.*\.(fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|.+\/reqplay\/) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js
 
-# 哔哩哔哩番剧开启1080P+ （by NobyDa）
+# 哔哩哔哩番剧开启1080P+ （by NobyDa） 冲突禁用
 #hostname=api.bilibili.com, app.bilibili.com,
-^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/bilifj.js
+#^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/bilifj.js
 
 # 解除微信屏蔽（支持淘宝、天猫、支付宝等平台）(by HotKids)
 ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/weixin110.js

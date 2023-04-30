@@ -1,0 +1,17 @@
+# > YouTube网页端去广告
+# 去除YouTube网页端视频播放器前的广告
+^https?://[\w\-]+\.googlevideo\.com/.*&(adformat|adurl|ad_preroll|ad_slots|ad_flags) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
+# 去除YouTube网页端视频播放器后的广告
+^https?://[\w\-]+\.googlevideo\.com/.*&(adformat|adurl|ad_preroll|ad_slots|ad_flags|idpj) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
+# 去除YouTube网页端视频中的广告
+^https?://[\w\-]+\.googlevideo\.com/.*&(type=video|kind=as3|idpj) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
+# 去除YouTube网页端右侧的广告栏
+^https?://[\w\-]+\.google\.com/pagead/.*&adxs=.* url reject
+# 去除YouTube网页端顶部的广告条
+^https?://[\w\-]+\.google\.com/pagead/.*&adk=.* url reject
+# 去除YouTube网页端搜索结果页中的广告
+^https?://[\w\-]+\.google\.com/pagead/.*&psa=1&ei=.* url reject
+# 去除YouTube网页端“相关视频”中的广告
+^https?://[\w\-]+\.google\.com/pagead/.*&sgr=.* url reject
+# 去除YouTube网页端注释中的广告
+^https?://[\w\-]+\.google\.com/pagead/.*&asnt=.* url reject

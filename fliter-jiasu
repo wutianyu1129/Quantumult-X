@@ -87,26 +87,3 @@ host-suffix, spankbang.com, 全球加速
 host-suffix, pornfind.org, 全球加速
 host-suffix, theporndude.com, 全球加速
 host-suffix, pornhub.com, 全球加速
-
-# > 朵朵校友圈去广告
-host-suffix, ad.duoduo.link, reject
-
-# > 向日葵去广告
-host-suffix, dm.toutiao.com, reject
-host-suffix, ddns.oray.com, reject
-host-suffix, sl-tk.oray.com, reject
-host-suffix, client-api.oray.com, reject
-host-suffix, push.oray.com, reject
-host-suffix, offline-adv.oray.com, reject
-host-keyword, upload-cdn.orayimg.com, reject
-host-keyword, upload-cdn.orayimg.com-upload-activity, reject
-
-# > local
-ip-cidr, 10.0.0.0/8, direct
-ip-cidr, 127.0.0.0/8, direct
-ip-cidr, 172.16.0.0/12, direct
-ip-cidr, 192.168.0.0/16, direct
-ip-cidr, 224.0.0.0/24, direct
-ip-cidr, 182.254.116.0/24, direct
-geoip, cn, 大陆节点
-final, 兜底分流

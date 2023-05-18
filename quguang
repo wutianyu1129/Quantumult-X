@@ -1,0 +1,12 @@
+# > 朵朵校友圈去广告
+host-suffix, ad.duoduo.link, reject
+
+# > 向日葵去广告
+host-suffix, dm.toutiao.com, reject
+host-suffix, ddns.oray.com, reject
+host-suffix, sl-tk.oray.com, reject
+host-suffix, client-api.oray.com, reject
+host-suffix, push.oray.com, reject
+host-suffix, offline-adv.oray.com, reject
+host-keyword, upload-cdn.orayimg.com, reject
+host-keyword, upload-cdn.orayimg.com-upload-activity, reject

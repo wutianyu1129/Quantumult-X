@@ -10,3 +10,6 @@ host-suffix, push.oray.com, reject
 host-suffix, offline-adv.oray.com, reject
 host-keyword, upload-cdn.orayimg.com, reject
 host-keyword, upload-cdn.orayimg.com-upload-activity, reject
+
+# > GPT4放跟踪
+host, o33249.ingest.sentry.io:443, reject

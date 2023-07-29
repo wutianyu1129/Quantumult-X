@@ -1,28 +1,28 @@
 # > 临时其他
-host-suffix, b.cdnst.net, 全球加速
-host-suffix, limbopro.com, 全球加速
-host-suffix, poecdn.net, 全球加速
-host-suffix, poe.com, 全球加速
-host-suffix, maxmind.com, 全球加速
-host-suffix, cloudflare.com, 全球加速
-host-suffix, textgpt.chat, 全球加速
-host-suffix, fishchips.io, 全球加速
-host-suffix, fishport.cloud, 全球加速
-host-suffix, fishport.cyou, 全球加速
-host-suffix, huggingface.co, 全球加速
-host-suffix, photos.app.goo.gl, 全球加速
-host-suffix, segment-anything.com, 全球加速
-host-suffix, bing.com, 全球加速
-host-suffix, anti-ad.net, 全球加速
-host-suffix, 9to5mac.com, 全球加速
-host-suffix, dyp.li, 全球加速
-host-suffix, gstatic.com, 全球加速
-host-suffix, mojie.nl, 全球加速
-host-suffix, voanews.com, 全球加速
-host-suffix, voachinese.com, 全球加速
-host-suffix, bbc.com, 全球加速
-host-suffix, bbc.in, 全球加速
-host-suffix, bulianglin.com, 全球加速
+DOMAIN-SUFFIX, b.cdnst.net
+DOMAIN-SUFFIX, limbopro.com
+DOMAIN-SUFFIX, poecdn.net
+DOMAIN-SUFFIX, poe.com
+DOMAIN-SUFFIX, maxmind.com
+DOMAIN-SUFFIX, cloudflare.com
+DOMAIN-SUFFIX, textgpt.chat
+DOMAIN-SUFFIX, fishchips.io
+DOMAIN-SUFFIX, fishport.cloud
+DOMAIN-SUFFIX, fishport.cyou
+DOMAIN-SUFFIX, huggingface.co
+DOMAIN-SUFFIX, photos.app.goo.gl
+DOMAIN-SUFFIX, segment-anything.com
+DOMAIN-SUFFIX, bing.com
+DOMAIN-SUFFIX, anti-ad.net
+DOMAIN-SUFFIX, 9to5mac.com
+DOMAIN-SUFFIX, dyp.li
+DOMAIN-SUFFIX, gstatic.com
+DOMAIN-SUFFIX, mojie.nl
+DOMAIN-SUFFIX, voanews.com
+DOMAIN-SUFFIX, voachinese.com
+DOMAIN-SUFFIX, bbc.com
+DOMAIN-SUFFIX, bbc.in
+DOMAIN-SUFFIX, bulianglin.com
 
 # > 色情网站
 host-suffix, kink.com, 全球加速

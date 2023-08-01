@@ -1,27 +1,12 @@
-// ==UserScript==
-// @name         Hide Ads on www.cc98.org
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Hide ads on www.cc98.org
-// @author       You
-// @match        https://www.cc98.org/*
-// @grant        none
-// ==/UserScript==
+function hideAds(response, url, header) {
+    var body = response.body;
+    // 使用正则表达式匹配广告位的HTML结构
+    var adRegex = /<div style="position: relative; width: 18.75rem; height: 6.25rem;">[\s\S]*?<\/div>/g;
+    body = body.replace(adRegex, ""); // 将广告位的HTML结构替换为空，实现隐藏广告
 
-(function() {
-    'use strict';
+    // 更新响应的内容
+    response.body = body;
+    $done(response);
+}
 
-    // Define the CSS selector for the ad node you want to hide
-    const adSelector = 'div.adButtons';
-
-    // Function to hide the ad node
-    function hideAd() {
-        const adNode = document.querySelector(adSelector);
-        if (adNode) {
-            adNode.style.display = 'none';
-        }
-    }
-
-    // Run the hideAd function when the page finishes loading
-    window.addEventListener('load', hideAd);
-})();
+$done({ response: $response });

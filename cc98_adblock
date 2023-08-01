@@ -2,5 +2,5 @@
 hostname = www-cc98-org-s.webvpn.zju.edu.cn,www.cc98.org
 
 [Script]
-http-request ^http:\/\/www-cc98-org-s\.webvpn\.zju\.edu\.cn:8001$ script-path=https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/cc98.js
-http-request ^http:\/\/www\.cc98\.org$ script-path=https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/cc98.js
+http-request ^https?://www-cc98-org-s\.webvpn\.zju\.edu\.cn:8001/.*$ script-path=https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/cc98.js
+http-request ^http:\/\/www\.cc98\.org/.$ script-path=https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/cc98.js

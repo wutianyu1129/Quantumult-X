@@ -12,7 +12,7 @@ DOMAIN-KEYWORD, upload-cdn.orayimg.com, reject
 DOMAIN-KEYWORD, upload-cdn.orayimg.com-upload-activity, reject
 
 # > YouTube去广告
-DOMAIN-SUFFIX, http://static.doubleclick.net, reject
+DOMAIN-SUFFIX, static.doubleclick.net, reject
 DOMAIN-SUFFIX, jnn-pa.googleapis.com, reject
 DOMAIN-SUFFIX, sentry.io, reject
 DOMAIN, googleads.g.doubleclick.net, reject

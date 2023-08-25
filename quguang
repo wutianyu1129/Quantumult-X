@@ -10,3 +10,13 @@ DOMAIN-SUFFIX, push.oray.com, reject
 DOMAIN-SUFFIX, offline-adv.oray.com, reject
 DOMAIN-KEYWORD, upload-cdn.orayimg.com, reject
 DOMAIN-KEYWORD, upload-cdn.orayimg.com-upload-activity, reject
+
+# > YouTube去广告
+DOMAIN-SUFFIX, static.doubleclick.net, reject
+DOMAIN-SUFFIX, googleapis.com, reject
+DOMAIN-SUFFIX, safebrowsing.googleapis-cn.com, reject
+DOMAIN-SUFFIX, sentry.io, reject
+DOMAIN-SUFFIX, doubleclick.net, reject
+DOMAIN-KEYWORD, get_midroll_, reject
+DOMAIN-KEYWORD, pagead, reject
+DOMAIN-KEYWORD, googleads, reject

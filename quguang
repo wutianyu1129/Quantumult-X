@@ -11,7 +11,7 @@ DOMAIN-SUFFIX, offline-adv.oray.com, reject
 DOMAIN-KEYWORD, upload-cdn.orayimg.com, reject
 DOMAIN-KEYWORD, upload-cdn.orayimg.com-upload-activity, reject
 
-# > YouTube去广告
+# > YouTube Web去广告
 DOMAIN-SUFFIX, static.doubleclick.net, reject
 DOMAIN-SUFFIX, jnn-pa.googleapis.com, reject
 DOMAIN-SUFFIX, safebrowsing.googleapis-cn.com, reject

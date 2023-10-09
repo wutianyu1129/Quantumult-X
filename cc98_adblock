@@ -1,4 +1,4 @@
-[URL Rewrite]
+[Rewrite]
 ^https://www\.cc98\.org/.*$ url-response-body https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/cc98.js
 
 [MITM]

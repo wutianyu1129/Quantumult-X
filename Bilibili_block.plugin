@@ -22,4 +22,4 @@ DOMAIN-SUFFIX,dl.hdslb.com
 (?=.*(hdslb\.com.*(\.zip|\.mp4)))^((?!(hdslb\.com\/bfs\/app-static\/)).)*$ url reject
 
 [MITM]
-hostname = *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
+hostname = *.hdslb.com,*.bilivideo.com

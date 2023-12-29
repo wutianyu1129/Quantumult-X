@@ -18,7 +18,7 @@ DOMAIN-SUFFIX,biligame.net,reject
 DOMAIN-SUFFIX,krxd.net,reject
 DOMAIN-SUFFIX,dl.hdslb.com,reject
 # 小红书精简并阻止缓存
-DOMAIN-SUFFIX,fe-static.xhscdn.com,reject
+#DOMAIN-SUFFIX,fe-static.xhscdn.com,reject
 
 [URL Rewrite]
 # bilibili精简并阻止缓存

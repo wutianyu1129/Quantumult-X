@@ -11,12 +11,12 @@
 
 [Rule]
 # 精简并阻止缓存占用
-DOMAIN-SUFFIX,upos-sz-staticcos.bilivideo.com
-DOMAIN-SUFFIX,appdl-1-drcn.dbankcdn.com
-DOMAIN-SUFFIX,biligame.com
-DOMAIN-SUFFIX,biligame.net
-DOMAIN-SUFFIX,krxd.net
-DOMAIN-SUFFIX,dl.hdslb.com
+DOMAIN-SUFFIX,upos-sz-staticcos.bilivideo.com,proxy
+DOMAIN-SUFFIX,appdl-1-drcn.dbankcdn.com,proxy
+DOMAIN-SUFFIX,biligame.com,proxy
+DOMAIN-SUFFIX,biligame.net,proxy
+DOMAIN-SUFFIX,krxd.net,proxy
+DOMAIN-SUFFIX,dl.hdslb.com,proxy
 
 [URL Rewrite]
 (?=resource\?resourceUrl|upos\-sz\-staticcos) url reject

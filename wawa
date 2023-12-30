@@ -10,6 +10,7 @@
 #!update：2023.12.30
 
 [Rule]
+
 # bilibili精简并阻止缓存
 DOMAIN-SUFFIX,upos-sz-staticcos.bilivideo.com,reject
 DOMAIN-SUFFIX,appdl-1-drcn.dbankcdn.com,reject
@@ -17,13 +18,39 @@ DOMAIN-SUFFIX,biligame.com,reject
 DOMAIN-SUFFIX,biligame.net,reject
 DOMAIN-SUFFIX,krxd.net,reject
 DOMAIN-SUFFIX,dl.hdslb.com,reject
+
 # 小红书精简并阻止缓存
 #DOMAIN-SUFFIX,fe-static.xhscdn.com,reject
 
+# > 朵朵校友圈去广告
+DOMAIN-SUFFIX, ad.duoduo.link, reject
+
+# > 向日葵去广告
+DOMAIN-SUFFIX, dm.toutiao.com, reject
+DOMAIN-SUFFIX, ddns.oray.com, reject
+DOMAIN-SUFFIX, sl-tk.oray.com, reject
+DOMAIN-SUFFIX, client-api.oray.com, reject
+DOMAIN-SUFFIX, push.oray.com, reject
+DOMAIN-SUFFIX, offline-adv.oray.com, reject
+DOMAIN-KEYWORD, upload-cdn.orayimg.com, reject
+DOMAIN-KEYWORD, upload-cdn.orayimg.com-upload-activity, reject
+
+# > YouTube Web去广告
+DOMAIN-SUFFIX, static.doubleclick.net, reject
+DOMAIN-SUFFIX, jnn-pa.googleapis.com, reject
+DOMAIN-SUFFIX, safebrowsing.googleapis-cn.com, reject
+DOMAIN-SUFFIX, doubleclick.net, reject
+DOMAIN-KEYWORD, sentry.io, reject
+DOMAIN-KEYWORD, get_midroll_, reject
+DOMAIN-KEYWORD, pagead, reject
+DOMAIN-KEYWORD, googleads, reject
+
 [URL Rewrite]
+
 # bilibili精简并阻止缓存
 (?=resource\?resourceUrl|upos\-sz\-staticcos) url reject
 (?=.*(hdslb\.com.*(\.zip|\.mp4)))^((?!(hdslb\.com\/bfs\/app-static\/)).)*$ url reject
+
 # 小红书精简并阻止缓存
 (?=xhscdn.*\.(otf|OTF|ttf|TTF|zip)) url reject
 

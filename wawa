@@ -7,7 +7,7 @@
 #!select = 
 #!input = 
 #!raw-url=https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/wawa
-#!update：2023.12.30
+#!update：2024.1.1
 
 [Rule]
 
@@ -22,10 +22,10 @@ DOMAIN-SUFFIX,dl.hdslb.com,reject
 # 小红书精简并阻止缓存
 #DOMAIN-SUFFIX,fe-static.xhscdn.com,reject
 
-# > 朵朵校友圈去广告
+# 朵朵校友圈去广告
 DOMAIN-SUFFIX, ad.duoduo.link, reject
 
-# > 向日葵去广告
+# 向日葵去广告
 DOMAIN-SUFFIX, dm.toutiao.com, reject
 DOMAIN-SUFFIX, ddns.oray.com, reject
 DOMAIN-SUFFIX, sl-tk.oray.com, reject
@@ -35,7 +35,7 @@ DOMAIN-SUFFIX, offline-adv.oray.com, reject
 DOMAIN-KEYWORD, upload-cdn.orayimg.com, reject
 DOMAIN-KEYWORD, upload-cdn.orayimg.com-upload-activity, reject
 
-# > YouTube Web去广告
+# YouTube Web去广告
 DOMAIN-SUFFIX, static.doubleclick.net, reject
 DOMAIN-SUFFIX, jnn-pa.googleapis.com, reject
 DOMAIN-SUFFIX, safebrowsing.googleapis-cn.com, reject
@@ -44,6 +44,7 @@ DOMAIN-KEYWORD, sentry.io, reject
 DOMAIN-KEYWORD, get_midroll_, reject
 DOMAIN-KEYWORD, pagead, reject
 DOMAIN-KEYWORD, googleads, reject
+
 
 [URL Rewrite]
 
@@ -54,5 +55,17 @@ DOMAIN-KEYWORD, googleads, reject
 # 小红书精简并阻止缓存
 (?=xhscdn.*\.(otf|OTF|ttf|TTF|zip)) url reject
 
+
+[Script]
+
+# 跳过中间界面，支付宝链接、被封禁链接进行通知弹窗跳转，在微信中用快照显示被封禁的链接（可选），在微信中进行强制重定向（可选），群聊 / 扫码均可使用，可选项可在脚本 2、3 行更改，也可在 BoxJs 中更改
+# Author：zZPiglet，原重写地址：https://raw.githubusercontent.com/zZPiglet/Task/master/UnblockURLinWeChat.conf
+# 修正地址：https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/UnblockURLinWeChat.conf
+http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js, requires-body=true, timeout=60, tag=weixin110
+
+# 微信去广告[不包含公众号信息流AD、朋友圈AD][推荐开启青少年模式可去除朋友圈AD]
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body advertisement response-body ddgksf2013
+
 [MITM]
 hostname = *.hdslb.com, *.bilivideo.com, manga.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, grpc.biliapi.net, *.xhscdn.com
+hostname = weixin110.qq.com, security.wechat.com, mp.weixin.qq.com

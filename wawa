@@ -36,6 +36,7 @@ DOMAIN-KEYWORD, upload-cdn.orayimg.com, reject
 DOMAIN-KEYWORD, upload-cdn.orayimg.com-upload-activity, reject
 
 # YouTube Web去广告
+AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT-NO-DROP
 DOMAIN-SUFFIX, static.doubleclick.net, reject
 DOMAIN-SUFFIX, jnn-pa.googleapis.com, reject
 DOMAIN-SUFFIX, safebrowsing.googleapis-cn.com, reject

@@ -13,10 +13,10 @@
 
 # bilibili精简并阻止缓存
 DOMAIN-SUFFIX,upos-sz-staticcos.bilivideo.com,reject
-DOMAIN-SUFFIX,appdl-1-drcn.dbankcdn.com,reject
-DOMAIN-SUFFIX,biligame.com,reject
-DOMAIN-SUFFIX,biligame.net,reject
-DOMAIN-SUFFIX,krxd.net,reject
+#DOMAIN-SUFFIX,appdl-1-drcn.dbankcdn.com,reject
+#DOMAIN-SUFFIX,biligame.com,reject
+#DOMAIN-SUFFIX,biligame.net,reject
+#DOMAIN-SUFFIX,krxd.net,reject
 DOMAIN-SUFFIX,dl.hdslb.com,reject
 
 # 小红书精简并阻止缓存

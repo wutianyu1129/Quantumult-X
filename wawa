@@ -12,7 +12,7 @@
 [Rule]
 
 # bilibili精简并阻止缓存
-DOMAIN-SUFFIX,upos-sz-staticcos.bilivideo.com,reject
+#DOMAIN-SUFFIX,upos-sz-staticcos.bilivideo.com,reject
 #DOMAIN-SUFFIX,appdl-1-drcn.dbankcdn.com,reject
 #DOMAIN-SUFFIX,biligame.com,reject
 #DOMAIN-SUFFIX,biligame.net,reject
@@ -68,4 +68,4 @@ http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspams
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body advertisement response-body ddgksf2013
 
 [MITM]
-hostname = *.bilivideo.com, weixin110.qq.com, security.wechat.com, mp.weixin.qq.com
+hostname = weixin110.qq.com, security.wechat.com, mp.weixin.qq.com

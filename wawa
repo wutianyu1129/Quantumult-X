@@ -12,15 +12,15 @@
 [Rule]
 
 # bilibili精简并阻止缓存
-#DOMAIN-SUFFIX,upos-sz-staticcos.bilivideo.com,reject
-#DOMAIN-SUFFIX,appdl-1-drcn.dbankcdn.com,reject
-#DOMAIN-SUFFIX,biligame.com,reject
-#DOMAIN-SUFFIX,biligame.net,reject
-#DOMAIN-SUFFIX,krxd.net,reject
-#DOMAIN-SUFFIX,dl.hdslb.com,reject
+DOMAIN-SUFFIX,upos-sz-staticcos.bilivideo.com,reject
+DOMAIN-SUFFIX,appdl-1-drcn.dbankcdn.com,reject
+DOMAIN-SUFFIX,biligame.com,reject
+DOMAIN-SUFFIX,biligame.net,reject
+DOMAIN-SUFFIX,krxd.net,reject
+DOMAIN-SUFFIX,dl.hdslb.com,reject
 
 # 小红书精简并阻止缓存
-#DOMAIN-SUFFIX,fe-static.xhscdn.com,reject
+DOMAIN-SUFFIX,fe-static.xhscdn.com,reject
 
 # 朵朵校友圈去广告
 DOMAIN-SUFFIX, ad.duoduo.link, reject
@@ -50,11 +50,11 @@ DOMAIN-KEYWORD, googleads, reject
 [URL Rewrite]
 
 # bilibili精简并阻止缓存
-#(?=resource\?resourceUrl|upos\-sz\-staticcos) url reject
-#(?=.*(hdslb\.com.*(\.zip|\.mp4)))^((?!(hdslb\.com\/bfs\/app-static\/)).)*$ url reject
+(?=resource\?resourceUrl|upos\-sz\-staticcos) url reject
+(?=.*(hdslb\.com.*(\.zip|\.mp4)))^((?!(hdslb\.com\/bfs\/app-static\/)).)*$ url reject
 
 # 小红书精简并阻止缓存
-#(?=xhscdn.*\.(otf|OTF|ttf|TTF|zip)) url reject
+(?=xhscdn.*\.(otf|OTF|ttf|TTF|zip)) url reject
 
 
 [Script]

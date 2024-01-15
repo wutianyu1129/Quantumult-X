@@ -68,4 +68,4 @@ http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspams
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body advertisement response-body ddgksf2013
 
 [MITM]
-hostname = weixin110.qq.com, security.wechat.com, mp.weixin.qq.com
+hostname = manga.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, grpc.biliapi.net, edith.xiaohongshu.com, www.xiaohongshu.com, weixin110.qq.com, security.wechat.com, mp.weixin.qq.com

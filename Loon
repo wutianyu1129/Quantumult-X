@@ -95,15 +95,15 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 美国·负载均衡 = load-balance,美国·节点,url = http://www.apple.com/library/test/success.html,interval = 600,max-timeout = 1000,algorithm = pcc,img-url = 6.circle
 阻止·负载均衡 = load-balance,阻止·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,url = http://www.apple.com/library/test/success.html,interval = 600,max-timeout = 1000,algorithm = pcc,img-url = nosign
 # 手动选择
-全球·手动选择 = select,全球·节点,DIRECT,REJECT,REJECT-DROP,REJECT-NO-DROP,img-url = arrow.up.right.circle
-大陆·手动选择 = select,大陆·节点,DIRECT,REJECT,REJECT-DROP,REJECT-NO-DROP,img-url = arrow.down.backward.circle
-香港·手动选择 = select,香港·节点,DIRECT,REJECT,REJECT-DROP,REJECT-NO-DROP,img-url = 1.circle
-台湾·手动选择 = select,台湾·节点,DIRECT,REJECT,REJECT-DROP,REJECT-NO-DROP,img-url = 2.circle
-日本·手动选择 = select,日本·节点,DIRECT,REJECT,REJECT-DROP,REJECT-NO-DROP,img-url = 3.circle
-韩国·手动选择 = select,韩国·节点,DIRECT,REJECT,REJECT-DROP,REJECT-NO-DROP,img-url = 4.circle
-新国·手动选择 = select,新国·节点,DIRECT,REJECT,REJECT-DROP,REJECT-NO-DROP,img-url = 5.circle
-美国·手动选择 = select,美国·节点,DIRECT,REJECT,REJECT-DROP,REJECT-NO-DROP,img-url = 6.circle
-阻止·手动选择 = select,阻止·节点,DIRECT,REJECT,REJECT-DROP,REJECT-NO-DROP,img-url = nosign
+全球·手动选择 = select,全球·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,DIRECT,img-url = arrow.up.right.circle
+大陆·手动选择 = select,大陆·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,DIRECT,img-url = arrow.down.backward.circle
+香港·手动选择 = select,香港·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,DIRECT,img-url = 1.circle
+台湾·手动选择 = select,台湾·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,DIRECT,img-url = 2.circle
+日本·手动选择 = select,日本·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,DIRECT,img-url = 3.circle
+韩国·手动选择 = select,韩国·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,DIRECT,img-url = 4.circle
+新国·手动选择 = select,新国·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,DIRECT,img-url = 5.circle
+美国·手动选择 = select,美国·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,DIRECT,img-url = 6.circle
+阻止·手动选择 = select,阻止·节点,REJECT,REJECT-DROP,REJECT-NO-DROP,DIRECT,img-url = nosign
 
 [Proxy Chain]
 

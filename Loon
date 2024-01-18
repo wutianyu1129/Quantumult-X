@@ -46,16 +46,16 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 
 [Proxy Group]
 # 场景
-全球·场景 = ssid, default = 全球·策略, cellular = 全球·策略, "吴天宇的WLAN"=新国·策略, img-url = w.circle
-大陆·场景 = ssid, default = 大陆·策略, cellular = 大陆·策略, "吴天宇的WLAN"=新国·策略, img-url = c.circle
-香港·场景 = ssid, default = 香港·策略, cellular = 香港·策略, "吴天宇的WLAN"=新国·策略, img-url = h.circle
-台湾·场景 = ssid, default = 台湾·策略, cellular = 台湾·策略, "吴天宇的WLAN"=新国·策略, img-url = t.circle
-日本·场景 = ssid, default = 日本·策略, cellular = 日本·策略, "吴天宇的WLAN"=新国·策略, img-url = j.circle
-韩国·场景 = ssid, default = 韩国·策略, cellular = 韩国·策略, "吴天宇的WLAN"=新国·策略, img-url = k.circle
+全球·场景 = ssid, default = 全球·策略, cellular = 全球·策略, "吴天宇的WLAN"=全球·策略, img-url = w.circle
+大陆·场景 = ssid, default = 大陆·策略, cellular = 大陆·策略, "吴天宇的WLAN"=大陆·策略, img-url = c.circle
+香港·场景 = ssid, default = 香港·策略, cellular = 香港·策略, "吴天宇的WLAN"=香港·策略, img-url = h.circle
+台湾·场景 = ssid, default = 台湾·策略, cellular = 台湾·策略, "吴天宇的WLAN"=台湾·策略, img-url = t.circle
+日本·场景 = ssid, default = 日本·策略, cellular = 日本·策略, "吴天宇的WLAN"=日本·策略, img-url = j.circle
+韩国·场景 = ssid, default = 韩国·策略, cellular = 韩国·策略, "吴天宇的WLAN"=韩国·策略, img-url = k.circle
 新国·场景 = ssid, default = 新国·策略, cellular = 新国·策略, "吴天宇的WLAN"=新国·策略, img-url = s.circle
-美国·场景 = ssid, default = 美国·策略, cellular = 美国·策略, "吴天宇的WLAN"=新国·策略, img-url = u.circle
-直连·场景 = ssid, default = 直连·策略, cellular = 直连·策略, "吴天宇的WLAN"=新国·策略, img-url = d.circle
-拒绝·场景 = ssid, default = 拒绝·策略, cellular = 拒绝·策略, "吴天宇的WLAN"=新国·策略, img-url = r.circle
+美国·场景 = ssid, default = 美国·策略, cellular = 美国·策略, "吴天宇的WLAN"=美国·策略, img-url = u.circle
+直连·场景 = ssid, default = 直连·策略, cellular = 直连·策略, "吴天宇的WLAN"=直连·策略, img-url = d.circle
+拒绝·场景 = ssid, default = 拒绝·策略, cellular = 拒绝·策略, "吴天宇的WLAN"=拒绝·策略, img-url = r.circle
 # 策略
 全球·策略 = select, 全球·延时优选, 全球·故障转移, 全球·负载均衡, 全球·手动选择, img-url = w.circle
 大陆·策略 = select, 大陆·延时优选, 大陆·故障转移, 大陆·负载均衡, 大陆·手动选择, img-url = c.circle

@@ -1,12 +1,12 @@
 # Name           Loon
 # Author         Wuty-zju
-# UpdateTime     2024/1/17
+# UpdateTime     2024/1/18
 
 [General]
-doh3-server = https://dns.alidns.com/dns-query,https://doh.pub/dns-query,https://cloudflare-dns.com/dns-query,https://dns.google/dns-query
-doh-server = https://dns.alidns.com/dns-query,https://doh.pub/dns-query,https://cloudflare-dns.com/dns-query,https://dns.google/dns-query
+doh3-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query, https://cloudflare-dns.com/dns-query, https://dns.google/dns-query
+doh-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query, https://cloudflare-dns.com/dns-query, https://dns.google/dns-query
+dns-server = 223.5.5.5, 2400:3200::1, 119.29.29.29, 2402:4e00::, 1.1.1.1, 2606:4700:4700::1111, 8.8.8.8, 2001:4860:4860::8888
 ipv6 = true
-dns-server = 223.5.5.5,2400:3200::1,119.29.29.29,2402:4e00::,1.1.1.1,2606:4700:4700::1111,8.8.8.8,2001:4860:4860::8888
 disable-udp-ports = 443
 allow-wifi-access = false
 mitm-on-wifi-access = false
@@ -21,15 +21,15 @@ disable-stun = false
 disconnect-on-policy-change = true
 switch-node-after-failure-times = 1
 resource-parser = https://gitlab.com/sub-store/Sub-Store/-/releases/permalink/latest/downloads/sub-store-parser.loon.min.js
-skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
-bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, e.crashlynatics.com
+bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
 
 [Proxy]
 
 [Remote Proxy]
 # 订阅
-猫猫·订阅 = https://api.msclm.me/api/v1/client/subscribe?token=2023e428f04962acf25ea421b26e9c44,udp=true,fast-open=true,vmess-aead=true,enabled=true
-鱼薯·订阅 = http://front.fishport.cloud/api/v1/client/subscribe?token=d7db19b7967cfba4047cf9c4ab0e072c&node=1,udp=true,fast-open=true,vmess-aead=true,enabled=false
+猫猫·订阅 = https://api.msclm.me/api/v1/client/subscribe?token=2023e428f04962acf25ea421b26e9c44, udp=true, fast-open=true, vmess-aead=true, enabled=true
+鱼薯·订阅 = http://front.fishport.cloud/api/v1/client/subscribe?token=d7db19b7967cfba4047cf9c4ab0e072c&node=1, udp=true, fast-open=true, vmess-aead=true, enabled=false
 
 [Remote Filter]
 # 节点

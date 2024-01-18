@@ -65,6 +65,7 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 韩国·策略 = select, 韩国·延时优选, 韩国·故障转移, 韩国·负载均衡, 韩国·手动选择, img-url = k.circle
 新国·策略 = select, 新国·延时优选, 新国·故障转移, 新国·负载均衡, 新国·手动选择, img-url = s.circle
 美国·策略 = select, 美国·延时优选, 美国·故障转移, 美国·负载均衡, 美国·手动选择, img-url = u.circle
+直连·策略 = select, 直连·延时优选, 直连·故障转移, 直连·负载均衡, 直连·手动选择, img-url = d.circle
 阻止·策略 = select, 阻止·延时优选, 阻止·故障转移, 阻止·负载均衡, 阻止·手动选择, img-url = r.circle
 # 延时优选
 全球·延时优选 = url-test, 全球·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = w.circle
@@ -75,7 +76,8 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 韩国·延时优选 = url-test, 韩国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = k.circle
 新国·延时优选 = url-test, 新国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = s.circle
 美国·延时优选 = url-test, 美国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = u.circle
-阻止·延时优选 = url-test, 阻止·节点, REJECT, REJECT-DROP, REJECT-NO-DROP, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = r.circle
+直连·延时优选 = url-test, 直连·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = d.circle
+阻止·延时优选 = url-test, 阻止·节点, REJECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = r.circle
 # 故障转移
 全球·故障转移 = fallback, 全球·节点, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = w.circle
 大陆·故障转移 = fallback, 大陆·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = c.circle
@@ -85,7 +87,9 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 韩国·故障转移 = fallback, 韩国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = k.circle
 新国·故障转移 = fallback, 新国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = s.circle
 美国·故障转移 = fallback, 美国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = u.circle
-阻止·故障转移 = fallback, 阻止·节点, REJECT, REJECT-DROP, REJECT-NO-DROP, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = r.circle
+美国·故障转移 = fallback, 美国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = u.circle
+直连·故障转移 = fallback, 直连·节点, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = r.circle
+阻止·故障转移 = fallback, 阻止·节点, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = r.circle
 # 负载均衡
 全球·负载均衡 = load-balance, 全球·节点, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = w.circle
 大陆·负载均衡 = load-balance, 大陆·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = c.circle

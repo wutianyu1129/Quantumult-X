@@ -7,7 +7,7 @@
 #!select = 
 #!input = 
 #!raw-url=https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/wawa
-#!update：2024.1.16
+#!update：2024.1.18
 
 [Rule]
 
@@ -52,6 +52,10 @@ DOMAIN-KEYWORD, googleads, reject
 # bilibili精简并阻止缓存
 (?=resource\?resourceUrl|upos\-sz\-staticcos) url reject
 (?=.*(hdslb\.com.*(\.zip|\.mp4)))^((?!(hdslb\.com\/bfs\/app-static\/)).)*$ url reject
+# 移除视频链接跟踪参数
+(^https:\/\/(www|m)\.bilibili\.com\/video\/BV\w{10})((\/\?buvid=.*)|(\/\?share_source=.*)) 302 $1
+# 移除直播间链接跟踪参数
+(^https:\/\/live\.bilibili\.com\/\d+)((\?broadcast_type.*)|(\?launch_id.*)) 302 $1
 
 # 小红书精简并阻止缓存
 (?=xhscdn.*\.(otf|OTF|ttf|TTF|zip)) url reject

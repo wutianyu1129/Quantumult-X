@@ -20,7 +20,7 @@ fast-switch = false
 disable-stun = false
 disconnect-on-policy-change = true
 switch-node-after-failure-times = 1
-resource-parser = https://gitlab.com/sub-store/Sub-Store/-/releases/permalink/latest/downloads/sub-store-parser.loon.min.js
+resource-parser = https://github.com/sub-store-org/Sub-Store/releases/download/2.14.182/sub-store-parser.loon.min.js
 skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, e.crashlynatics.com
 bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
 
@@ -28,8 +28,8 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 
 [Remote Proxy]
 # 订阅
-猫猫·订阅 = https://api.msclm.me/api/v1/client/subscribe?token = 2023e428f04962acf25ea421b26e9c44, udp = true, fast-open = true, vmess-aead = true, enabled = true
-鱼薯·订阅 = http://front.fishport.cloud/api/v1/client/subscribe?token = d7db19b7967cfba4047cf9c4ab0e072c&node = 1, udp = true, fast-open = true, vmess-aead = true, enabled = false
+猫猫·订阅 = https://wvv.msclm.xyz/api/v1/client/subscribe?token=2023e428f04962acf25ea421b26e9c44, udp = true, fast-open = true, vmess-aead = true, enabled = true
+鱼薯·订阅 = https://sawako.chipsfuck.fish/api/v1/client/subscribe?token=d7db19b7967cfba4047cf9c4ab0e072c&node=1, udp = true, fast-open = true, vmess-aead = true, enabled = false
 
 [Remote Filter]
 # 节点
@@ -68,15 +68,15 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 直连·策略 = select, 直连·延时优选, 直连·故障转移, 直连·负载均衡, 直连·手动选择, img-url = d.circle
 阻止·策略 = select, 阻止·延时优选, 阻止·故障转移, 阻止·负载均衡, 阻止·手动选择, img-url = r.circle
 # 延时优选
-全球·延时优选 = url-test, 全球·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = w.circle
+全球·延时优选 = url-test, 全球·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = w.circle
 大陆·延时优选 = url-test, 大陆·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = c.circle
-香港·延时优选 = url-test, 香港·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = h.circle
-台湾·延时优选 = url-test, 台湾·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = t.circle
-日本·延时优选 = url-test, 日本·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = j.circle
-韩国·延时优选 = url-test, 韩国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = k.circle
-新国·延时优选 = url-test, 新国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = s.circle
-美国·延时优选 = url-test, 美国·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = u.circle
-直连·延时优选 = url-test, 直连·节点, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = d.circle
+香港·延时优选 = url-test, 香港·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = h.circle
+台湾·延时优选 = url-test, 台湾·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = t.circle
+日本·延时优选 = url-test, 日本·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = j.circle
+韩国·延时优选 = url-test, 韩国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = k.circle
+新国·延时优选 = url-test, 新国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = s.circle
+美国·延时优选 = url-test, 美国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = u.circle
+直连·延时优选 = url-test, 直连·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = d.circle
 阻止·延时优选 = url-test, 阻止·节点, REJECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = r.circle
 # 故障转移
 全球·故障转移 = fallback, 全球·节点, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = w.circle

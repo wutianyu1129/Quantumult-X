@@ -1,6 +1,6 @@
 # Name           Loon
 # Author         Wuty-zju
-# UpdateTime     2024/1/19-PM/5:10
+# UpdateTime     2024/2/2-AM/1:32
 
 [General]
 doh3-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query, https://cloudflare-dns.com/dns-query, https://dns.google/dns-query
@@ -28,7 +28,7 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 
 [Remote Proxy]
 # 订阅
-猫猫·订阅 = https://wvv.msclm.xyz/api/v1/client/subscribe?token=2023e428f04962acf25ea421b26e9c44, udp = true, fast-open = true, vmess-aead = true, enabled = true
+猫猫·订阅 = https://qcc.msclm.xyz/api/v1/client/subscribe?token=2023e428f04962acf25ea421b26e9c44, udp = true, fast-open = true, vmess-aead = true, enabled = true
 鱼薯·订阅 = https://sawako.chipsfuck.fish/api/v1/client/subscribe?token=d7db19b7967cfba4047cf9c4ab0e072c&node=1, udp = true, fast-open = true, vmess-aead = true, enabled = false
 
 [Remote Filter]

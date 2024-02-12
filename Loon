@@ -1,6 +1,7 @@
 # Name           Loon
 # Author         Wuty-zju
-# UpdateTime     2024/2/3-AM/2:45
+# UpdateTime     2024/2/12-PM/7:00
+# URL            https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/Loon
 
 [General]
 doh3-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query, https://cloudflare-dns.com/dns-query, https://dns.google/dns-query

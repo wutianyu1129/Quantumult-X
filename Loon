@@ -260,7 +260,7 @@ https://script.hub/file/_start_/https://raw.githubusercontent.com/limbopro/Adblo
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy = 全球·场景, tag = BoxJs, enabled = true
 https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin, policy = 全球·场景, tag = Sub-Store, enabled = false
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, tag = 转换, enabled = true
-https://raw.githubusercontent.com/Keywos/rule/main/loon/Netisp.plugin, tag = 入口落地查询, enabled = true
+https://raw.githubusercontent.com/Keywos/rule/main/script/netisp/netisp.plugin, tag = 入口落地查询, enabled = true
 https://raw.githubusercontent.com/Peng-YM/Loon-Gallery/master/loon-gallery.plugin, policy = 全球·场景, tag = 插件仓库, enabled = false
 
 [Mitm]

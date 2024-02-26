@@ -27,6 +27,10 @@ DOMAIN-SUFFIX, gwp.xiaojukeji.com, reject
 # 朵朵校友圈去广告
 DOMAIN-SUFFIX, ad.duoduo.link, reject
 
+# Pixiv去广告
+DOMAIN-SUFFIX, pixon.ads-pixiv.net, reject
+DOMAIN-SUFFIX, ads-pixiv.net, reject
+
 # 向日葵去广告
 DOMAIN-SUFFIX, dm.toutiao.com, reject
 DOMAIN-SUFFIX, ddns.oray.com, reject

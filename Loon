@@ -1,6 +1,6 @@
 # Name           Loon
 # Author         Wuty-zju
-# UpdateTime     2024/2/24-PM/10:15
+# UpdateTime     2024/3/10-PM/3:55
 # URL            https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/Loon
 
 [General]
@@ -176,8 +176,8 @@ https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/TV.plugin, tag 
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/TestFlight.plugin, tag =  iRingo: ✈ TestFlight, enabled = false
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/News.plugin, policy = 大陆·场景, tag =  iRingo: 📰 News, enabled = false
 # Fries
-https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/HTTPDNS.Block.plugin, tag = 🍟 Fries: 🚫 Block HTTPDNS, enabled = false
-https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.plugin, tag = 🍟 Fries: 🌐 General Enhanced, enabled = false
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/HTTPDNS.Block.plugin, tag = 🍟 Fries: 🚫 Block HTTPDNS, enabled = true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.plugin, tag = 🍟 Fries: 🌐 General Enhanced, enabled = true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin, tag = 🍟 Fries: 🌐 DNS enhanced, enabled = false
 # BiliBili
 https://raw.githubusercontent.com/BiliUniverse/ADBlock/main/modules/BiliBili.ADBlock.plugin, tag = 📺 BiliBili: 🛡️ ADBlock, enabled = true

@@ -7,7 +7,7 @@
 #!select = 
 #!input = 
 #!raw-url=https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/wawa
-#!update：2024.2.2
+#!update：2024.3.10
 
 [Rule]
 # bilibili精简并阻止缓存
@@ -19,7 +19,7 @@ DOMAIN-SUFFIX, krxd.net, reject
 DOMAIN-SUFFIX, dl.hdslb.com, reject
 
 # 小红书精简并阻止缓存
-DOMAIN-SUFFIX, fe-static.xhscdn.com, reject
+#DOMAIN-SUFFIX, fe-static.xhscdn.com, reject
 
 # 滴滴出行 #https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.snippet
 DOMAIN-SUFFIX, gwp.xiaojukeji.com, reject
@@ -64,7 +64,7 @@ DOMAIN-KEYWORD, googleads, reject
 (^https:\/\/live\.bilibili\.com\/\d+)((\?broadcast_type.*)|(\?launch_id.*)) 302 $1
 
 # 小红书精简并阻止缓存
-(?=xhscdn.*\.(otf|OTF|ttf|TTF|zip)) url reject
+#(?=xhscdn.*\.(otf|OTF|ttf|TTF|zip)) url reject
 
 # 滴滴出行 #https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.snippet
 ^https:\/\/hd\.xiaojukeji\.com\/d - reject-dict

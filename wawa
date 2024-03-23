@@ -11,7 +11,7 @@
 
 [Rule]
 # 雅思哥
-#DOMAIN-SUFFIX, ieltsbro.com, direct
+# DOMAIN-SUFFIX, ieltsbro.com, direct
 
 # bilibili精简并阻止缓存
 DOMAIN-SUFFIX, upos-sz-staticcos.bilivideo.com, reject

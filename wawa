@@ -7,10 +7,9 @@
 #!select = 
 #!input = 
 #!raw-url=https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/wawa
-#!update：2024.3.23
+#!update：2024.3.22
 
 [Rule]
-
 # bilibili精简并阻止缓存
 DOMAIN-SUFFIX, upos-sz-staticcos.bilivideo.com, reject
 DOMAIN-SUFFIX, appdl-1-drcn.dbankcdn.com, reject

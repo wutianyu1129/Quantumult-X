@@ -1,6 +1,6 @@
 # Name           Loon
 # Author         Wuty-zju
-# UpdateTime     2024/3/26-AM/1:05
+# UpdateTime     2024/4/3-PM/2:05
 # URL            https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/Loon
 
 [General]
@@ -174,7 +174,8 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 
 [Plugin]
 # Apple
-https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/Location.plugin, tag =  iRingo: 📍 Location & 🗺️ Maps, enabled = true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/Location.plugin, tag =  iRingo: 📍 Location, enabled = true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/Maps.plugin, tag =  iRingo: 🗺️ Maps, enabled = true
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/Siri.plugin, tag =  iRingo: 🔍 Siri & Search, enabled = true
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/TV.plugin, tag =  iRingo: 📺 TV app, enabled = false
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/TestFlight.plugin, tag =  iRingo: ✈ TestFlight, enabled = false

@@ -14,6 +14,7 @@ mitm-on-wifi-access = false
 wifi-access-http-port = 7222
 wifi-access-socks5-port = 7221
 proxy-test-url = http://www.google.com/generate_204
+internet-test-url = http://www.apple.com/library/test/success.html
 test-timeout = 1
 interface-mode = auto
 sni-sniffing = true

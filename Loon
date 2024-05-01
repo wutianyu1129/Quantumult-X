@@ -30,7 +30,7 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 
 [Remote Proxy]
 # 订阅
-猫猫·订阅 = https://ooo.clmurl3.vip/api/v1/client/subscribe?token=4d5b12ccf2c546c6db732740a481eaf8, parser-enabled = true, udp = true, fast-open = true, vmess-aead = true, enabled = true
+猫猫·订阅 = https://mm.clmurl5.com/api/v1/client/subscribe?token=4d5b12ccf2c546c6db732740a481eaf8, parser-enabled = true, udp = true, fast-open = true, vmess-aead = true, enabled = true
 鱼薯·订阅 = https://hirasawa.chipsfuck.fish/api/v1/client/subscribe?token=3f9ce7d889c1c60bb927d6fc81bea583&node=1, parser-enabled = true, udp = true, fast-open = true, vmess-aead = true, enabled = true
 
 [Remote Filter]

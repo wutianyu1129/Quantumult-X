@@ -13,7 +13,7 @@ allow-wifi-access = false
 mitm-on-wifi-access = false
 wifi-access-http-port = 7222
 wifi-access-socks5-port = 7221
-proxy-test-url = http://www.google.com/generate_204
+proxy-test-url = http://www.apple.com/library/test/success.html
 internet-test-url = http://www.apple.com/library/test/success.html
 test-timeout = 1
 interface-mode = auto
@@ -71,38 +71,38 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 直连·策略 = select, 直连·延时优选, 直连·故障转移, 直连·负载均衡, 直连·手动选择, img-url = d.circle
 拒绝·策略 = select, 拒绝·延时优选, 拒绝·故障转移, 拒绝·负载均衡, 拒绝·手动选择, img-url = r.circle
 # 延时优选
-全球·延时优选 = url-test, 全球·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = w.circle
-大陆·延时优选 = url-test, 大陆·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = c.circle
-香港·延时优选 = url-test, 香港·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = h.circle
-台湾·延时优选 = url-test, 台湾·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = t.circle
-日本·延时优选 = url-test, 日本·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = j.circle
-韩国·延时优选 = url-test, 韩国·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = k.circle
-新国·延时优选 = url-test, 新国·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = s.circle
-美国·延时优选 = url-test, 美国·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = u.circle
-直连·延时优选 = url-test, 直连·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = d.circle
-拒绝·延时优选 = url-test, 拒绝·节点, REJECT, url = http://www.google.com/generate_204, interval = 600, tolerance = 10, img-url = r.circle
+全球·延时优选 = url-test, 全球·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = w.circle
+大陆·延时优选 = url-test, 大陆·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = c.circle
+香港·延时优选 = url-test, 香港·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = h.circle
+台湾·延时优选 = url-test, 台湾·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = t.circle
+日本·延时优选 = url-test, 日本·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = j.circle
+韩国·延时优选 = url-test, 韩国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = k.circle
+新国·延时优选 = url-test, 新国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = s.circle
+美国·延时优选 = url-test, 美国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = u.circle
+直连·延时优选 = url-test, 直连·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = d.circle
+拒绝·延时优选 = url-test, 拒绝·节点, REJECT, url = http://www.apple.com/library/test/success.html, interval = 600, tolerance = 10, img-url = r.circle
 # 故障转移
-全球·故障转移 = fallback, 全球·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = w.circle
-大陆·故障转移 = fallback, 大陆·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = c.circle
-香港·故障转移 = fallback, 香港·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = h.circle
-台湾·故障转移 = fallback, 台湾·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = t.circle
-日本·故障转移 = fallback, 日本·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = j.circle
-韩国·故障转移 = fallback, 韩国·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = k.circle
-新国·故障转移 = fallback, 新国·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = s.circle
-美国·故障转移 = fallback, 美国·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = u.circle
-直连·故障转移 = fallback, 直连·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = d.circle
-拒绝·故障转移 = fallback, 拒绝·节点, REJECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, img-url = r.circle
+全球·故障转移 = fallback, 全球·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = w.circle
+大陆·故障转移 = fallback, 大陆·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = c.circle
+香港·故障转移 = fallback, 香港·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = h.circle
+台湾·故障转移 = fallback, 台湾·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = t.circle
+日本·故障转移 = fallback, 日本·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = j.circle
+韩国·故障转移 = fallback, 韩国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = k.circle
+新国·故障转移 = fallback, 新国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = s.circle
+美国·故障转移 = fallback, 美国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = u.circle
+直连·故障转移 = fallback, 直连·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = d.circle
+拒绝·故障转移 = fallback, 拒绝·节点, REJECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, img-url = r.circle
 # 负载均衡
-全球·负载均衡 = load-balance, 全球·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = w.circle
-大陆·负载均衡 = load-balance, 大陆·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = c.circle
-香港·负载均衡 = load-balance, 香港·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = h.circle
-台湾·负载均衡 = load-balance, 台湾·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = t.circle
-日本·负载均衡 = load-balance, 日本·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = j.circle
-韩国·负载均衡 = load-balance, 韩国·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = k.circle
-新国·负载均衡 = load-balance, 新国·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = s.circle
-美国·负载均衡 = load-balance, 美国·节点, DIRECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = u.circle
-直连·负载均衡 = load-balance, 直连·节点, REJECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = d.circle
-拒绝·负载均衡 = load-balance, 拒绝·节点, REJECT, url = http://www.google.com/generate_204, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = r.circle
+全球·负载均衡 = load-balance, 全球·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = w.circle
+大陆·负载均衡 = load-balance, 大陆·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = c.circle
+香港·负载均衡 = load-balance, 香港·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = h.circle
+台湾·负载均衡 = load-balance, 台湾·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = t.circle
+日本·负载均衡 = load-balance, 日本·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = j.circle
+韩国·负载均衡 = load-balance, 韩国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = k.circle
+新国·负载均衡 = load-balance, 新国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = s.circle
+美国·负载均衡 = load-balance, 美国·节点, DIRECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = u.circle
+直连·负载均衡 = load-balance, 直连·节点, REJECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = d.circle
+拒绝·负载均衡 = load-balance, 拒绝·节点, REJECT, url = http://www.apple.com/library/test/success.html, interval = 600, max-timeout = 1000, algorithm = pcc, img-url = r.circle
 # 手动选择
 全球·手动选择 = select, 全球·节点, DIRECT, REJECT, REJECT-DROP, REJECT-NO-DROP, img-url = w.circle
 大陆·手动选择 = select, 大陆·节点, DIRECT, REJECT, REJECT-DROP, REJECT-NO-DROP, img-url = c.circle

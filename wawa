@@ -101,5 +101,8 @@ http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core script-pat
 http-response ^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token) script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js, requires-body=true, timeout=60, tag=pixivAds
 http-response https:\/\/(?:app-api\.pixiv\.net\/v2\/user\/detail|oauth\.secure\.pixiv\.net\/auth\/token) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/pixiv.js, requires-body=true, timeout=60, tag=pixiv
 
+# > 人机验证
+http-response ^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) requires-body=1,timeout=30,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js,tag=Google人机验证
+
 [MITM]
-hostname = manga.bilibili.com, api.live.bilibili.com, live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, www.bilibili.com, m.bilibili.com, grpc.biliapi.net, edith.xiaohongshu.com, www.xiaohongshu.com, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com, weixin110.qq.com, security.wechat.com, mp.weixin.qq.com, hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, oauth.secure.pixiv.net, app-api.pixiv.net
+hostname = manga.bilibili.com, api.live.bilibili.com, live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, www.bilibili.com, m.bilibili.com, grpc.biliapi.net, edith.xiaohongshu.com, www.xiaohongshu.com, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com, weixin110.qq.com, security.wechat.com, mp.weixin.qq.com, hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, oauth.secure.pixiv.net, app-api.pixiv.net, www.google.com*

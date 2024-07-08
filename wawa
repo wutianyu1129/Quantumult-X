@@ -86,18 +86,31 @@ DOMAIN-KEYWORD, googleads, reject
 
 # BiliBili
 http-request ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/kokoryh/Script/master/data/bili_activity.json/_end_/bili_activity.json?type=mock&target-app=loon-plugin, timeout=60, tag=bili_activity
+
 http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bili-suit-diy.js, requires-body=true, tag=bilibili.skin
+
 http-response ^https:\/\/app\.bilibili\.com\/x\/(v2\/account\/(mine|myinfo\?)|resource\/show\/tab\/v2) script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili_json.js, requires-body=true, tag=bilibili.layout
+
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/(splash\/(list|show)|feed\/index|search\/square) script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili_json.js, requires-body=true, tag=bilibili.general
+
 http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili_json.js, requires-body=true, tag=bilibili.live
+
 http-response ^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab\?) script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili_json.js, requires-body=true, tag=bilibili.pgc
+
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body=true, binary-body-mode=true, tag=bilibili.searchAll
+
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.show\.v1\.Popular\/Index$ script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body=true, binary-body-mode=true, tag=bilibili.popular
+
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body=true, binary-body-mode=true, tag=bilibili.dynAll
+
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|ViewProgress)$ script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body=true, binary-body-mode=true, tag=bilibili.v1.view
+
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playurl\.v1\.PlayURL\/PlayView$ script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body=true, binary-body-mode=true, tag=bilibili.playView
+
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body=true, binary-body-mode=true, tag=bilibili.teenager
+
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmView script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body=true, binary-body-mode=true, tag=bilibili.dmView
+
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.main\.community\.reply\.v1\.Reply\/MainList script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body=true, binary-body-mode=true, tag=bilibili.mainList
 
 # 跳过中间界面，支付宝链接、被封禁链接进行通知弹窗跳转，在微信中用快照显示被封禁的链接（可选），在微信中进行强制重定向（可选），群聊 / 扫码均可使用，可选项可在脚本 2、3 行更改，也可在 BoxJs 中更改 # Author：zZPiglet，原重写地址：https://raw.githubusercontent.com/zZPiglet/Task/master/UnblockURLinWeChat.conf # 修正地址：https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/UnblockURLinWeChat.conf
@@ -108,18 +121,28 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path=https
 
 # > 滴滴出行 #https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.snippet
 http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
 http-response ^https:\/\/daijia\.kuaidadi\.com\/gateway script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
 http-response ^https:\/\/freight\.xiaojukeji\.com\/gateway script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
 http-response ^https:\/\/daijia\.kuaidadi\.com:443\/gateway script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
 http-response ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
 http-response ^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
 http-response ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
 http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
 http-response ^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
 http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
 # > Pixiv
 http-response ^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token) script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js, requires-body=true, timeout=60, tag=pixivAds
+
 http-response https:\/\/(?:app-api\.pixiv\.net\/v2\/user\/detail|oauth\.secure\.pixiv\.net\/auth\/token) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/pixiv.js, requires-body=true, timeout=60, tag=pixiv
 
 # > 人机验证

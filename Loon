@@ -1,6 +1,6 @@
 # Name           Loon
 # Author         Wuty-zju
-# UpdateTime     2024/6/30-PM/3:15
+# UpdateTime     2024/7/25-PM/3:15
 # URL            https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/Loon
 
 [General]
@@ -31,7 +31,6 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 [Remote Proxy]
 # 订阅
 猫猫·订阅 = https://qqq.clmurl2.com/api/v1/client/subscribe?token=c08e6673e7778a965ef286013c121479, parser-enabled = true, udp = true, fast-open = true, vmess-aead = true, enabled = true
-猪猪·订阅 = https://apiv1.fliggylink.com/api/v1/client/subscribe?token=7498781b6191081d1a7e4b8af3c320eb, parser-enabled = true, udp = true, fast-open = true, vmess-aead = true, enabled = true
 鱼薯·订阅 = https://hirasawa.chipsfuck.fish/api/v1/client/subscribe?token=3f9ce7d889c1c60bb927d6fc81bea583&node=1, parser-enabled = true, udp = true, fast-open = true, vmess-aead = true, enabled = true
 
 [Remote Filter]
@@ -145,7 +144,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 # GitHub
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy = 全球·场景, tag = GitHub, enabled = true
 # OpenAI
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OpenAI/OpenAI.list, policy = 全球·场景, tag = OpenAI, enabled = true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OpenAI/OpenAI.list, policy = 全球·手动选择, tag = OpenAI, enabled = true
 # X
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Twitter/Twitter.list, policy = 全球·场景, tag = X, enabled = true
 # TikTok

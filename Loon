@@ -1,6 +1,6 @@
 # Name           Loon
 # Author         Wuty-zju
-# UpdateTime     2024/7/26-PM/3:15
+# UpdateTime     2024/7/26-PM/4:15
 # URL            https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/Loon
 
 [General]
@@ -31,7 +31,7 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 [Remote Proxy]
 # 订阅
 西数·订阅 = https://wd-gold.com/subscribe/knryqa-jsureaqn, parser-enabled = true, udp = true, fast-open = true, vmess-aead = true, enabled = true
-猫猫·订阅 = https://qqq.clmurl2.com/api/v1/client/subscribe?token=c08e6673e7778a965ef286013c121479, parser-enabled = true, udp = true, fast-open = true, vmess-aead = true, enabled = False
+猫猫·订阅 = https://qqq.clmurl2.com/api/v1/client/subscribe?token=c08e6673e7778a965ef286013c121479, parser-enabled = true, udp = true, fast-open = true, vmess-aead = true, enabled = false
 
 [Remote Filter]
 # 节点

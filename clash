@@ -1,6 +1,6 @@
 # Name: Clash
 # Author: Wuty-zju
-# UpdateTime: 2024/7/29-PM/7:12
+# UpdateTime: 2024/7/29-PM/7:33
 # URL: https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/Clash
 
 port: 7890
@@ -510,111 +510,99 @@ rule-providers:
     interval: 86400
   Apple:
     type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml"
     path: ./ruleset/apple.yaml
-    interval: 86400
-  Apple_domain:
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Domain.yaml"
-    path: ./ruleset/apple_domain.yaml
     interval: 86400
   WeChat:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml"
     path: ./ruleset/wechat.yaml
     interval: 86400
   Speedtest:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml"
     path: ./ruleset/speedtest.yaml
     interval: 86400
   YouTube:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
     path: ./ruleset/youtube.yaml
     interval: 86400
   Google:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml"
     path: ./ruleset/google.yaml
     interval: 86400
   GitHub:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
     path: ./ruleset/github.yaml
     interval: 86400
   OpenAI:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
     path: ./ruleset/openai.yaml
     interval: 86400
   X:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
     path: ./ruleset/twitter.yaml
     interval: 86400
   TikTok:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml"
     path: ./ruleset/tiktok.yaml
     interval: 86400
   Telegram:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
     path: ./ruleset/telegram.yaml
     interval: 86400
   Spotify:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml"
     path: ./ruleset/spotify.yaml
     interval: 86400
   Disney:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml"
     path: ./ruleset/disney.yaml
     interval: 86400
   Netflix:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
     path: ./ruleset/netflix.yaml
     interval: 86400
   PayPal:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml"
     path: ./ruleset/paypal.yaml
     interval: 86400
   Claude:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
     path: ./ruleset/claude.yaml
     interval: 86400
   China:
     type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml"
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
     path: ./ruleset/china.yaml
-    interval: 86400
-  China_domain:
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Domain.yaml"
-    path: ./ruleset/china_domain.yaml
     interval: 86400
 
 # 分流规则
@@ -622,7 +610,6 @@ rules:
   - RULE-SET, Advertising, REJECT
   - RULE-SET, ZJU, 全球·场景
   - RULE-SET, Apple, 全球·场景
-  - RULE-SET, Apple_domain, 全球·场景
   - RULE-SET, WeChat, 全球·场景
   - RULE-SET, Speedtest, 全球·场景
   - RULE-SET, YouTube, 全球·场景
@@ -638,6 +625,5 @@ rules:
   - RULE-SET, PayPal, 全球·场景
   - RULE-SET, Claude, 全球·场景
   - RULE-SET, China, DIRECT
-  - RULE-SET, China_domain, DIRECT
   - MATCH, 全球·场景
 

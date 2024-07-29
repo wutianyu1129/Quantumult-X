@@ -1,6 +1,6 @@
 # Name: Clash
 # Author: Wuty-zju
-# UpdateTime: 2024/7/29-PM/7:45
+# UpdateTime: 2024/7/29-PM/7:48
 # URL: https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/Clash
 
 port: 7890
@@ -504,8 +504,8 @@ rule-providers:
     interval: 86400
   ZJU:
     type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/ZJU.list"
+    behavior: domain
+    url: "https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/ZJU.list"
     path: ./ruleset/zju.yaml
     interval: 86400
   Apple:

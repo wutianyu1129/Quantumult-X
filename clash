@@ -1,7 +1,7 @@
-# Name: Loon
+# Name: Clash
 # Author: Wuty-zju
 # UpdateTime: 2024/7/26-PM/4:15
-# URL: https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/Loon
+# URL: https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/Clash
 
 port: 7890
 socks-port: 7891
@@ -18,6 +18,9 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -37,26 +40,17 @@ dns:
     ipcidr:
       - 240.0.0.0/4
 
-proxies:
-  - name: "西数·订阅"
-    type: vmess
-    server: your_server_address
-    port: your_port
-    uuid: your_uuid
-    alterId: 0
-    cipher: auto
-    udp: true
-    tls: true
-  - name: "猫猫·订阅"
-    type: vmess
-    server: your_server_address
-    port: your_port
-    uuid: your_uuid
-    alterId: 0
-    cipher: auto
-    udp: true
-    tls: true
-    enabled: false
+proxy-providers:
+  西数·订阅:
+    type: http
+    path: ./ProxySet/westdata.yaml
+    url: "https://wd-gold.com/subscribe/knryqa-jsureaqn"
+    interval: 1800
+    filter: 'Hong Kong'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 
 proxy-groups:
   - name: "全球·策略"

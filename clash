@@ -43,16 +43,63 @@ dns:
 proxy-providers:
   西数·订阅:
     type: http
-    path: ./ProxySet/westdata.yaml
+    path: ./profiles/proxies/westdata.yaml
     url: "https://api.wd-gold.com/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=WD_Trojan&url=https%3A%2F%2Fwd-gold.com%2Fsubscribe%2Fknryqa-jsureaqn"
     interval: 1800
-    filter: ''
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
 
+proxy-groups:  
+  - name: 全球·节点
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 西数·订阅
+
 proxy-groups:
+  - name: "全球·场景"
+    type: select
+    proxies:
+      - "全球·策略"
+  - name: "大陆·场景"
+    type: select
+    proxies:
+      - "大陆·策略"
+  - name: "香港·场景"
+    type: select
+    proxies:
+      - "香港·策略"
+  - name: "台湾·场景"
+    type: select
+    proxies:
+      - "台湾·策略"
+  - name: "日本·场景"
+    type: select
+    proxies:
+      - "日本·策略"
+  - name: "韩国·场景"
+    type: select
+    proxies:
+      - "韩国·策略"
+  - name: "新国·场景"
+    type: select
+    proxies:
+      - "新国·策略"
+  - name: "美国·场景"
+    type: select
+    proxies:
+      - "美国·策略"
+  - name: "直连·场景"
+    type: select
+    proxies:
+      - "直连·策略"
+  - name: "拒绝·场景"
+    type: select
+    proxies:
+      - "拒绝·策略"
   - name: "全球·策略"
     type: select
     proxies:
@@ -123,55 +170,303 @@ proxy-groups:
       - "拒绝·故障转移"
       - "拒绝·负载均衡"
       - "拒绝·手动选择"
-  - name: "全球·场景"
+  - name: "全球·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "大陆·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "香港·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "台湾·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "日本·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "韩国·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "新国·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "美国·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "直连·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "拒绝·延时优选"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "全球·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "大陆·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅
+  - name: "香港·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅
+ - name: "台湾·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "日本·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "韩国·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "新国·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "美国·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "直连·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "拒绝·故障转移"
+    type: fallback
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    max-fail: 3
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "全球·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "大陆·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "香港·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "台湾·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "日本·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "韩国·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "新国·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "美国·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "直连·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "拒绝·负载均衡"
+    type: load-balance
+    url: http://www.apple.com/library/test/success.html
+    interval: 10000
+    strategy: round-robin
+    proxies:
+      - "西数·订阅"
+      - "猫猫·订阅"
+  - name: "全球·手动选择"
     type: select
     proxies:
-      - "全球·策略"
-  - name: "大陆·场景"
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT
+  - name: "大陆·手动选择"
     type: select
     proxies:
-      - "大陆·策略"
-  - name: "香港·场景"
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT
+  - name: "香港·手动选择"
     type: select
     proxies:
-      - "香港·策略"
-  - name: "台湾·场景"
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT
+  - name: "台湾·手动选择"
     type: select
     proxies:
-      - "台湾·策略"
-  - name: "日本·场景"
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT
+  - name: "日本·手动选择"
     type: select
     proxies:
-      - "日本·策略"
-  - name: "韩国·场景"
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT
+  - name: "韩国·手动选择"
     type: select
     proxies:
-      - "韩国·策略"
-  - name: "新国·场景"
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT
+  - name: "新国·手动选择"
     type: select
     proxies:
-      - "新国·策略"
-  - name: "美国·场景"
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT
+  - name: "美国·手动选择"
     type: select
     proxies:
-      - "美国·策略"
-  - name: "直连·场景"
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT
+  - name: "直连·手动选择"
     type: select
     proxies:
-      - "直连·策略"
-  - name: "拒绝·场景"
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT
+  - name: "拒绝·手动选择"
     type: select
     proxies:
-      - "拒绝·策略"
-
-rules:
-  - DOMAIN-SUFFIX,ad.com,拒绝·场景
-  - DOMAIN-SUFFIX,ad.net,拒绝·场景
-  - DOMAIN-SUFFIX,ads.com,拒绝·场景
-  - DOMAIN-SUFFIX,ads.net,拒绝·场景
-  - DOMAIN-SUFFIX,adserver.com,拒绝·场景
-  - DOMAIN-SUFFIX,adserver.net,拒绝·场景
-  - DOMAIN-SUFFIX,tracking.com,拒绝·场景
-  - DOMAIN-SUFFIX,tracking.net,拒绝·场景
-  - GEOIP,LAN,DIRECT
-  - MATCH,全球·场景
+      - "西数·订阅"
+      - "猫猫·订阅"
+      - DIRECT
+      - REJECT

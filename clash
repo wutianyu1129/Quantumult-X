@@ -1,17 +1,17 @@
 # Name: Clash
 # Author: Wuty-zju
-# UpdateTime: 2024/7/29-PM/8:28
+# UpdateTime: 2024/7/29-PM/9:00
 # URL: https://gh-proxy.com/https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/clash
 
 port: 7890
 socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
 allow-lan: true
 mode: rule
 log-level: info
-external-controller: 127.0.0.1:9090
-redir-port: 7892
-tproxy-port: 7893
 ipv6: true
+external-controller: 127.0.0.1:9090
 
 dns:
   enable: true
@@ -27,17 +27,9 @@ dns:
     - https://dns.google/dns-query
   fallback:
     - 223.5.5.5
-    - 2400:3200::1
     - 119.29.29.29
-    - 2402:4e00::
     - 1.1.1.1
-    - 2606:4700:4700::1111
     - 8.8.8.8
-    - 2001:4860:4860::8888
-  fallback-filter:
-    geoip: true
-    ipcidr:
-      - 240.0.0.0/4
 
 proxy-providers:
   西数·订阅:
@@ -47,71 +39,10 @@ proxy-providers:
     interval: 1800
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 300
 
 proxy-groups:  
-# 节点
-  - name: 全球·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|恢复|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|TG|tg|\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b)).*$"
-
-  - name: 大陆·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*((?i)大陆|(\b(China)\b)))(?!.*((?i)校园)).*$"
-
-  - name: 香港·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-  - name: 台湾·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-  - name: 日本·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-  - name: 韩国·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-  - name: 新国·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-  - name: 美国·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-  - name: 直连·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*((?i)直连|(\b(AD)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-  - name: 拒绝·节点
-    type: select
-    use:
-      - 西数·订阅
-    filter: "^(?=.*((?i)广告|(\b(AD)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
 # 场景
   - name: "全球·场景"
     type: select
@@ -232,61 +163,70 @@ proxy-groups:
     url: http://www.apple.com/library/test/success.html
     interval: 10000
     proxies:
-      - "全球·节点"
+      - "西数·订阅"
+    filter: "^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|恢复|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|TG|tg|\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b)).*$"
   - name: "大陆·延时优选"
     type: url-test
     url: http://www.apple.com/library/test/success.html
     interval: 10000
     proxies:
-      - "大陆·节点"
+      - "西数·订阅"
+    filter: "^(?=.*((?i)大陆|(\b(China)\b)))(?!.*((?i)校园)).*$"
   - name: "香港·延时优选"
     type: url-test
     url: http://www.apple.com/library/test/success.html
     interval: 10000
     proxies:
-      - "香港·节点"
+      - "西数·订阅"
+    filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
   - name: "台湾·延时优选"
     type: url-test
     url: http://www.apple.com/library/test/success.html
     interval: 10000
     proxies:
-      - "台湾·节点"
+      - "西数·订阅"
+    filter: "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
   - name: "日本·延时优选"
     type: url-test
     url: http://www.apple.com/library/test/success.html
     interval: 10000
     proxies:
-      - "日本·节点"
+      - "西数·订阅"
+    filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
   - name: "韩国·延时优选"
     type: url-test
     url: http://www.apple.com/library/test/success.html
     interval: 10000
     proxies:
-      - "韩国·节点"
+      - "西数·订阅"
+    filter: "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
   - name: "新国·延时优选"
     type: url-test
     url: http://www.apple.com/library/test/success.html
     interval: 10000
-    proxies:
-      - "新国·节点"
+      - "西数·订阅"
+    filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
   - name: "美国·延时优选"
     type: url-test
     url: http://www.apple.com/library/test/success.html
     interval: 10000
     proxies:
-      - "美国·节点"
+      - "西数·订阅"
+    filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
   - name: "直连·延时优选"
     type: url-test
     url: http://www.apple.com/library/test/success.html
     interval: 10000
     proxies:
-      - "直连·节点"
+      - "西数·订阅"
+    filter: "^(?=.*((?i)直连|(\b(AD)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
   - name: "拒绝·延时优选"
     type: url-test
     url: http://www.apple.com/library/test/success.html
     interval: 10000
     proxies:
-      - "拒绝·节点"
+      - "西数·订阅"
+    filter: "^(?=.*((?i)广告|(\b(AD)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 
 # 故障转移
   - name: "全球·故障转移"
@@ -493,6 +433,58 @@ proxy-groups:
       - "拒绝·节点"
       - DIRECT
       - REJECT
+
+# 节点
+  - name: 全球·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|恢复|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|TG|tg|\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b)).*$"
+  - name: 大陆·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*((?i)大陆|(\b(China)\b)))(?!.*((?i)校园)).*$"
+  - name: 香港·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  - name: 台湾·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  - name: 日本·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  - name: 韩国·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  - name: 新国·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  - name: 美国·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  - name: 直连·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*((?i)直连|(\b(AD)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  - name: 拒绝·节点
+    type: select
+    use:
+      - 西数·订阅
+    filter: "^(?=.*((?i)广告|(\b(AD)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 
 rule-providers:
 # 远程规则

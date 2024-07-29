@@ -44,9 +44,9 @@ proxy-providers:
   西数·订阅:
     type: http
     path: ./ProxySet/westdata.yaml
-    url: "https://wd-gold.com/subscribe/knryqa-jsureaqn"
+    url: "https://api.wd-gold.com/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=WD_Trojan&url=https%3A%2F%2Fwd-gold.com%2Fsubscribe%2Fknryqa-jsureaqn"
     interval: 1800
-    filter: 'Hong Kong'
+    filter: ''
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204

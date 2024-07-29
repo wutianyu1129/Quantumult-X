@@ -504,7 +504,7 @@ rule-providers:
     interval: 86400
   ZJU:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/ZJU.list"
     path: ./ruleset/zju.yaml
     interval: 86400

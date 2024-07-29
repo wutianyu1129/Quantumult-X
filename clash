@@ -484,3 +484,151 @@ proxy-groups:
       - "拒绝·节点"
       - DIRECT
       - REJECT
+
+rule-providers:
+# 远程规则
+  Advertising:
+    type: http
+    behavior: domain
+    url: "https://anti-ad.net/surge2.txt"
+    path: ./ruleset/advertising.yaml
+    interval: 86400
+  ZJU:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/ZJU.list"
+    path: ./ruleset/zju.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Apple/Apple.list"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  Apple_domain:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Apple/Apple_Domain.list"
+    path: ./ruleset/apple_domain.yaml
+    interval: 86400
+  WeChat:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list"
+    path: ./ruleset/wechat.yaml
+    interval: 86400
+  Speedtest:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Speedtest/Speedtest.list"
+    path: ./ruleset/speedtest.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list"
+    path: ./ruleset/youtube.yaml
+    interval: 86400
+  Google:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list"
+    path: ./ruleset/google.yaml
+    interval: 86400
+  GitHub:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list"
+    path: ./ruleset/github.yaml
+    interval: 86400
+  OpenAI:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OpenAI/OpenAI.list"
+    path: ./ruleset/openai.yaml
+    interval: 86400
+  X:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Twitter/Twitter.list"
+    path: ./ruleset/twitter.yaml
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/TikTok/TikTok.list"
+    path: ./ruleset/tiktok.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list"
+    path: ./ruleset/telegram.yaml
+    interval: 86400
+  Spotify:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list"
+    path: ./ruleset/spotify.yaml
+    interval: 86400
+  Disney:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Disney/Disney.list"
+    path: ./ruleset/disney.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list"
+    path: ./ruleset/netflix.yaml
+    interval: 86400
+  PayPal:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list"
+    path: ./ruleset/paypal.yaml
+    interval: 86400
+  Claude:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Claude/Claude.list"
+    path: ./ruleset/claude.yaml
+    interval: 86400
+  China:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaMax/ChinaMax.list"
+    path: ./ruleset/china.yaml
+    interval: 86400
+  China_domain:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaMax/ChinaMax_Domain.list"
+    path: ./ruleset/china_domain.yaml
+    interval: 86400
+
+# 分流规则
+rules:
+  - RULE-SET, Advertising, REJECT
+  - RULE-SET, ZJU, 全球·场景
+  - RULE-SET, Apple, 全球·场景
+  - RULE-SET, Apple_domain, 全球·场景
+  - RULE-SET, WeChat, 全球·场景
+  - RULE-SET, Speedtest, 全球·场景
+  - RULE-SET, YouTube, 全球·场景
+  - RULE-SET, Google, 全球·场景
+  - RULE-SET, GitHub, 全球·场景
+  - RULE-SET, OpenAI, 全球·场景
+  - RULE-SET, X, 全球·场景
+  - RULE-SET, TikTok, 全球·场景
+  - RULE-SET, Telegram, 全球·场景
+  - RULE-SET, Spotify, 全球·场景
+  - RULE-SET, Disney, 全球·场景
+  - RULE-SET, Netflix, 全球·场景
+  - RULE-SET, PayPal, 全球·场景
+  - RULE-SET, Claude, 全球·场景
+  - RULE-SET, China, DIRECT
+  - RULE-SET, China_domain, DIRECT
+  - MATCH, 全球·场景
+

@@ -1,0 +1,240 @@
+#==========================================
+# @ConfigName        Loon to Clash Configuration
+# @Author            Wuty-zju
+# @UpdateTime        2024/7/26-PM/4:15
+#==========================================
+
+port: 7890           # HTTP Proxy Port
+socks-port: 7891     # Socks Port
+redir-port: 7892     # Redir Port
+mixed-port: 7893     # Mixed Port
+allow-lan: false     # Allow LAN connections
+bind-address: "*"    # Bind address
+mode: rule           # Rule mode
+log-level: info      # Log level
+ipv6: true           # Enable IPv6
+external-controller: 127.0.0.1:9090
+
+dns:
+  enable: true       # Enable DNS
+  ipv6: true         # Enable IPv6
+  listen: 0.0.0.0:53 # DNS listen address
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - +.xboxlive.com
+    - msftconnecttest.com
+    - xbox.*.microsoft.com
+    - "*.battlenet.com.cn"
+    - "*.battlenet.com"
+    - "*.blzstatic.cn"
+    - "*.battle.net"
+  nameserver:        # Default DNS servers
+    - 223.5.5.5
+    - 2400:3200::1
+    - 119.29.29.29
+    - 2402:4e00::
+    - 1.1.1.1
+    - 2606:4700:4700::1111
+    - 8.8.8.8
+    - 2001:4860:4860::8888
+  fallback:          # Fallback DNS servers
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+proxy-providers:
+  西数·订阅:
+    type: http
+    url: https://wd-gold.com/subscribe/knryqa-jsureaqn
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800
+  猫猫·订阅:
+    type: http
+    url: https://qqq.clmurl2.com/api/v1/client/subscribe?token=c08e6673e7778a965ef286013c121479
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1800
+
+proxies: []
+
+proxy-groups:
+  - name: 全球·场景
+    type: select
+    proxies:
+      - 全球·策略
+      - DIRECT
+  - name: 大陆·场景
+    type: select
+    proxies:
+      - 大陆·策略
+      - DIRECT
+  - name: 香港·场景
+    type: select
+    proxies:
+      - 香港·策略
+      - DIRECT
+  - name: 台湾·场景
+    type: select
+    proxies:
+      - 台湾·策略
+      - DIRECT
+  - name: 日本·场景
+    type: select
+    proxies:
+      - 日本·策略
+      - DIRECT
+  - name: 韩国·场景
+    type: select
+    proxies:
+      - 韩国·策略
+      - DIRECT
+  - name: 新国·场景
+    type: select
+    proxies:
+      - 新国·策略
+      - DIRECT
+  - name: 美国·场景
+    type: select
+    proxies:
+      - 美国·策略
+      - DIRECT
+  - name: 直连·场景
+    type: select
+    proxies:
+      - 直连·策略
+      - DIRECT
+  - name: 拒绝·场景
+    type: select
+    proxies:
+      - 拒绝·策略
+      - REJECT
+
+  - name: 全球·策略
+    type: select
+    proxies:
+      - 全球·延时优选
+      - 全球·故障转移
+      - 全球·负载均衡
+      - 全球·手动选择
+  - name: 大陆·策略
+    type: select
+    proxies:
+      - 大陆·延时优选
+      - 大陆·故障转移
+      - 大陆·负载均衡
+      - 大陆·手动选择
+  - name: 香港·策略
+    type: select
+    proxies:
+      - 香港·延时优选
+      - 香港·故障转移
+      - 香港·负载均衡
+      - 香港·手动选择
+  - name: 台湾·策略
+    type: select
+    proxies:
+      - 台湾·延时优选
+      - 台湾·故障转移
+      - 台湾·负载均衡
+      - 台湾·手动选择
+  - name: 日本·策略
+    type: select
+    proxies:
+      - 日本·延时优选
+      - 日本·故障转移
+      - 日本·负载均衡
+      - 日本·手动选择
+  - name: 韩国·策略
+    type: select
+    proxies:
+      - 韩国·延时优选
+      - 韩国·故障转移
+      - 韩国·负载均衡
+      - 韩国·手动选择
+  - name: 新国·策略
+    type: select
+    proxies:
+      - 新国·延时优选
+      - 新国·故障转移
+      - 新国·负载均衡
+      - 新国·手动选择
+  - name: 美国·策略
+    type: select
+    proxies:
+      - 美国·延时优选
+      - 美国·故障转移
+      - 美国·负载均衡
+      - 美国·手动选择
+  - name: 直连·策略
+    type: select
+    proxies:
+      - 直连·延时优选
+      - 直连·故障转移
+      - 直连·负载均衡
+      - 直连·手动选择
+  - name: 拒绝·策略
+    type: select
+    proxies:
+      - 拒绝·延时优选
+      - 拒绝·故障转移
+      - 拒绝·负载均衡
+      - 拒绝·手动选择
+
+rule-providers:
+  Direct:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml
+    path: ./ruleset/Direct.yaml
+    interval: 86400
+  Lan:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml
+    path: ./ruleset/Lan.yaml
+    interval: 86400
+  Download:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml
+    path: ./ruleset/Download.yaml
+    interval: 86400
+  Ad:
+    type: http
+    behavior: domain
+    url: https://anti-ad.net/clash.yaml
+    path: ./ruleset/Ad.yaml
+    interval: 86400
+  ZJU:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/ZJU.list
+    path: ./ruleset/ZJU.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+  WeChat:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WeChat/WeChat.yaml

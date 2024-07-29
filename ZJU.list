@@ -1,0 +1,107 @@
+# ZJU 内网
+# 校内直连，校外通过内网穿透或 RVPN 访问
+
+# 域名
+zju.edu.cn
+
+# CC98
+cc98.org
+cc98.zju.edu.cn
+
+# NexusHD
+nexushd.org
+
+# ICSR WIKI
+icsr.wiki
+
+# ZJU School-Bus
+zjusec.com
+zjusec.net
+zjusec.top
+
+# ZJU SCT
+zjusct.io
+
+# ZJU EVA
+zjueva.net
+
+# ZJU QSC
+zjuqsc.com
+
+# 查老师
+DOMAIN-KEYWORD,chalaoshi
+
+# 通过 IP 认证的资源
+# 请勿添加可通过统一身份认证访问的国外资源，此类资源无需内网环境，可通过代理加速访问
+acm.org
+cnki.net
+gtadata.com
+jstor.org
+webofscience.com
+inoteexpress.com
+pnas.org
+cnpereading.com
+sciencemag.org
+cas.org
+webofknowledge.com
+pkulaw.com
+sslibrary.com
+serialssolutions.com
+duxiu.com
+wanfangdata.com.cn
+koolearn.com
+cssci.nju.edu.cn
+science.org
+aps.org
+incopat.com
+
+# NSTL
+oup.com
+ajtmh.org
+futuremedicine.com
+tandfonline.com
+genetics.org
+healthaffairs.org
+rsna.org
+iospress.com
+allenpress.com
+asabe.org
+geoscienceworld.org
+sagepub.com
+ajnr.org
+ajhp.org
+annals.org
+esajournals.org
+informs.org
+cshlpress.com
+nrcresearchpress.cn
+royalsocietypublishing.org
+oxfordjournals.org
+aspbjournals.org
+sciencesocieties.org
+degruyter.com
+cshprotocols.org
+liebertonline.com
+polymerjournals.com
+csiro.au
+iop.org
+electrochem.org
+ametsoc.org
+portlandpress.com
+nrcresearchpress.com
+arabidopsis.org
+springerlink.com
+highwire.org
+ovid.com
+rsc.org
+bmj.org
+aip.org
+springer.com
+iwaponline.com
+rsnajnls.org
+karger.com
+plantcell.org
+jamanetwork.com
+nejm.org
+icevirtuallibrary.com
+cdnsciencepub.com

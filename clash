@@ -301,7 +301,7 @@ proxy-groups:
     max-fail: 3
     proxies:
       - "香港·节点"
- - name: "台湾·故障转移"
+  - name: "台湾·故障转移"
     type: fallback
     url: http://www.apple.com/library/test/success.html
     interval: 10000

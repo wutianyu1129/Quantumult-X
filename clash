@@ -1,6 +1,6 @@
 # Name: WaWa-Clash
 # Author: Wuty-zju
-# UpdateTime: 2024/7/29-PM/9:30
+# UpdateTime: 2024/7/29-PM/9:33
 # URL: https://raw.githubusercontent.com/wutianyu1129/Quantumult-X/main/clash
 
 port: 7890
@@ -398,8 +398,7 @@ proxy-groups:
     type: select
     use:
       - "西数·订阅"
-    filter: "^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|恢复|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|
-    proxies:
+    filter: "^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|恢复|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|TG|tg|\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b)).*$"    proxies:
       - DIRECT
       - REJECT
   - name: "大陆·手动选择"
